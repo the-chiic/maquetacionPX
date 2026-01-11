@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    width: 1260px;
+    height: 595px;                              /*Altura=50px header + 45px nav + 400px main + 100px footer*/
+    font-size: 20px;
+}
+
+header{
+    width: 1260px;
+    height: 50px;
+    background-color: antiquewhite;
+    color: black;
+
+    #titulo{
+        text-align: center;
+    }
+}
+
+nav{
+    width: 1260px;
+    height: 45px;
+    background-color: aquamarine;
+
+    #lista-nav-izquierda{
+        float: left;
+        padding: 11.25px 0px;
+
+        li{
+            display: inline-block;
+            margin-left: 20px;
+            background-color: aqua;
+
+            a{
+                text-decoration: none;
+            }
+        }
+    }
+
+    #lista-nav-derecha{
+        float: right;
+        padding: 11.25px 0px;                   /*Medida exacta para que quede en el centro verticalmente*/
+
+        li{
+            display: inline-block;
+            margin-right: 20px;
+            background-color: aqua;
+
+            a{
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+main{
+    width: 1260px;
+    display: flow-root;
+    background-color: blue;
+
+    section{
+        float: left;                            /*Flotamos a la izquierda el section para que la caja de la derecha quepe poniendo medidas exactas*/
+        width: 780px;                           /*800px menos el padding que son 20px mas el padding del formulario que son 2em=40px*/
+        height: 340px;                          /*400px menos el padding que son 60px*/
+        margin: 0px 20px;
+        padding: 30px 10px;
+
+        p{
+            text-align: justify;
+            margin-bottom: 4em;
+        }
+
+        form{
+            background-color: #D8D8D8;
+            padding: 1em 0px;
+            padding-left: 70px;
+
+            div{
+                input{
+                    display: block;             /*Para que no esten en línea con los label*/
+                }
+
+                input[type="text"]{
+                    width: 500px;
+                    padding-left: 10px;
+                }
+
+                #enviar{
+                    width: 150px;
+                    height: 2em;
+                    margin-left: 50px;
+                }
+            }
+        }
+    }
+
+    aside{
+        float: left;                            /*Flotamos a la derecha el aside poniendo medidas exactas para que nos quepa todo en línea*/
+        width: 370px;                           /*400px menos los 30px del padding*/
+        height: 350px;                          /*400px menos los 50px del padding*/
+        background-color: blueviolet;
+        margin-right: 20px;
+        padding: 50px 0px 0px 30px;
+
+        div{
+            width: 150px;
+
+            img{
+                width: 150px;
+            }
+        }
+    }
+}
+
+footer{
+    width: 1260px;
+    height: 100px;
+    background-color: black;
+    color: aliceblue;
+}
